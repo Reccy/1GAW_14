@@ -34,7 +34,7 @@ public class FiremanController : MonoBehaviour
 
     [SerializeField] private ParticleSystem m_projectileParticleSys;
     [SerializeField] private Transform m_projectileOrigin;
-    [SerializeField] private Collider2D m_flamethrowerCollider;
+    [SerializeField] private Flammable m_flamethrower;
 
     private MMFeedbacks m_feedbacks;
 
@@ -76,13 +76,11 @@ public class FiremanController : MonoBehaviour
     {
         if (!m_inputFire)
         {
-            m_projectileParticleSys.Stop();
-            m_flamethrowerCollider.enabled = false;
+            m_flamethrower.Extinguish();
             return;
         }
 
-        m_flamethrowerCollider.enabled = true;
-        m_projectileParticleSys.Play();
+        m_flamethrower.Enflame();
 
         m_feedbacks.PlayFeedbacks();
     }

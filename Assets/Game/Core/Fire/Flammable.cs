@@ -17,15 +17,33 @@ public class Flammable : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Fire"))
+        var otherFlammable = collision.gameObject.GetComponent<Flammable>();
+
+        if (otherFlammable == null)
+            return;
+
+        if (otherFlammable.m_enflamed)
         {
             Enflame();
         }
     }
 
-    private void Enflame()
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        var otherFlammable = collision.gameObject.GetComponent<Flammable>();
+
+        if (otherFlammable == null)
+            return;
+
+        if (otherFlammable.m_enflamed)
+        {
+            Enflame();
+        }
+    }
+
+    public void Enflame()
     {
         if (m_enflamed)
             return;
@@ -34,7 +52,7 @@ public class Flammable : MonoBehaviour
         m_fireFX.Play();
     }
 
-    private void Extinguish()
+    public void Extinguish()
     {
         if (!m_enflamed)
             return;
