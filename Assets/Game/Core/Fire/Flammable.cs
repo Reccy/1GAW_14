@@ -8,6 +8,14 @@ public class Flammable : MonoBehaviour
 
     [SerializeField] private ParticleSystem m_fireFX;
 
+    public delegate void OnEnflamedEvent();
+    public OnEnflamedEvent OnEnflamed;
+
+    public delegate void OnExtinguishedEvent();
+    public OnExtinguishedEvent OnExtinguished;
+
+    public bool OnFire => m_enflamed;
+
     private void Awake()
     {
         if (m_enflamed)
@@ -50,6 +58,9 @@ public class Flammable : MonoBehaviour
 
         m_enflamed = true;
         m_fireFX.Play();
+
+        if (OnEnflamed != null)
+            OnEnflamed();
     }
 
     public void Extinguish()
@@ -59,5 +70,8 @@ public class Flammable : MonoBehaviour
 
         m_enflamed = false;
         m_fireFX.Stop();
+
+        if (OnExtinguished != null)
+            OnExtinguished();
     }
 }

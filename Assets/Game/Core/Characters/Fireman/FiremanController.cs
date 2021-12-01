@@ -18,6 +18,7 @@ public class FiremanController : MonoBehaviour
     private void ReadInput()
     {
         m_inputMovement = m_player.GetAxis2D("MoveHorizontal", "MoveVertical");
+
         m_inputFire = m_player.GetButton("Fire");
     }
 
@@ -36,12 +37,16 @@ public class FiremanController : MonoBehaviour
     [SerializeField] private Transform m_projectileOrigin;
     [SerializeField] private Flammable m_flamethrower;
 
+    private Flammable m_selfFire;
+
     private MMFeedbacks m_feedbacks;
 
     private void Awake()
     {
         m_player = ReInput.players.GetPlayer(PLAYER_ID);
         m_mouse = m_player.controllers.Mouse;
+
+        m_selfFire = GetComponent<Flammable>();
 
         m_feedbacks = GetComponent<MMFeedbacks>();
         m_rb = GetComponent<Rigidbody2D>();
