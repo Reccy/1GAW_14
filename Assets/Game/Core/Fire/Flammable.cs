@@ -7,6 +7,14 @@ public class Flammable : MonoBehaviour
     [SerializeField] private bool m_enflamed;
 
     [SerializeField] private ParticleSystem m_fireFX;
+    [SerializeField] private bool m_immediateEnflame = false;
+    [SerializeField] private bool m_immediateExtinguish = false;
+
+    private readonly float ENFLAME_DELAY = 0.2f;
+    private readonly float EXTINGUISH_DELAY = 0.02f;
+
+    private Coroutine m_enflameDelayCoroutine = null;
+    private Coroutine m_extinguishCoroutine = null;
 
     public delegate void OnEnflamedEvent();
     public OnEnflamedEvent OnEnflamed;
@@ -15,6 +23,8 @@ public class Flammable : MonoBehaviour
     public OnExtinguishedEvent OnExtinguished;
 
     public bool OnFire => m_enflamed;
+
+    [SerializeField] private bool m_debugMode = false;
 
     private void Awake()
     {
@@ -53,8 +63,19 @@ public class Flammable : MonoBehaviour
 
     public void Enflame()
     {
-        if (m_enflamed)
+        if (m_enflamed || m_enflameDelayCoroutine != null)
             return;
+
+        m_enflameDelayCoroutine = StartCoroutine(EnflameCoroutine());
+    }
+
+    private IEnumerator EnflameCoroutine()
+    {
+        if (!m_immediateEnflame)
+            yield return new WaitForSeconds(ENFLAME_DELAY);
+
+        if (m_debugMode)
+            Debug.Log("ENFLAME!");
 
         m_enflamed = true;
         m_fireFX.Play();
@@ -65,8 +86,19 @@ public class Flammable : MonoBehaviour
 
     public void Extinguish()
     {
-        if (!m_enflamed)
+        if (!m_enflamed || m_extinguishCoroutine != null)
             return;
+
+        m_extinguishCoroutine = StartCoroutine(ExtinguishCoroutine());
+    }
+
+    private IEnumerator ExtinguishCoroutine()
+    {
+        if (!m_immediateExtinguish)
+            yield return new WaitForSeconds(EXTINGUISH_DELAY);
+
+        if (m_debugMode)
+            Debug.Log("EXTINGUISHED!");
 
         m_enflamed = false;
         m_fireFX.Stop();

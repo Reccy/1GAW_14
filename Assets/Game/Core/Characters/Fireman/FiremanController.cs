@@ -21,12 +21,6 @@ public class FiremanController : MonoBehaviour
 
         m_inputFire = m_player.GetButton("Fire");
     }
-
-    private void ClearInput()
-    {
-        m_inputMovement = default(Vector2);
-        m_inputFire = default(bool);
-    }
     #endregion INPUT
 
     [SerializeField] private float m_speedMult = 3.0f;
@@ -63,7 +57,6 @@ public class FiremanController : MonoBehaviour
         Move();
         Aim();
         Fire();
-        ClearInput();
     }
 
     private void Move()

@@ -5128,6 +5128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_enflamed: 0
   m_fireFX: {fileID: 6755707984002183748}
+  m_immediateEnflame: 0
+  m_immediateExtinguish: 0
+  m_debugMode: 0
 --- !u!1 &1433922177112097654
 GameObject:
   m_ObjectHideFlags: 0
@@ -10148,3 +10151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_enflamed: 0
   m_fireFX: {fileID: 3160307890151432452}
+  m_immediateEnflame: 1
+  m_immediateExtinguish: 1
+  m_debugMode: 0
