@@ -35,6 +35,26 @@ public class Flammable : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        var fnp = FlammableNodePenalty.Instance;
+
+        if (fnp == null)
+            Debug.LogError("FlammableNodePenalty is null?!?!?!?!?");
+
+        fnp.Track(this);
+    }
+
+    private void OnDisable()
+    {
+        var fnp = FlammableNodePenalty.Instance;
+
+        if (fnp == null) // If it's null during OnDisable, game is shutting down
+            return;
+
+        fnp.Untrack(this);
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         var otherFlammable = collision.gameObject.GetComponent<Flammable>();
