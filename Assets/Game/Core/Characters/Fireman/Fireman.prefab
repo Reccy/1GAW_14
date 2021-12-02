@@ -5130,6 +5130,8 @@ MonoBehaviour:
   m_fireFX: {fileID: 6755707984002183748}
   m_immediateEnflame: 0
   m_immediateExtinguish: 0
+  m_listenToCollisions: 1
+  m_listenToTriggers: 1
   m_debugMode: 0
 --- !u!1 &1433922177112097654
 GameObject:
@@ -10089,6 +10091,7 @@ GameObject:
   - component: {fileID: 6469904424716168249}
   - component: {fileID: 6790146087735652888}
   - component: {fileID: 1209977825}
+  - component: {fileID: 112032910283527344}
   m_Layer: 0
   m_Name: Flamethrower
   m_TagString: Fire
@@ -10153,4 +10156,27 @@ MonoBehaviour:
   m_fireFX: {fileID: 3160307890151432452}
   m_immediateEnflame: 1
   m_immediateExtinguish: 1
+  m_listenToCollisions: 0
+  m_listenToTriggers: 0
   m_debugMode: 0
+--- !u!50 &112032910283527344
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8761875534503014732}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

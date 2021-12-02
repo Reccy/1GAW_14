@@ -5120,7 +5120,7 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 1
   autoRepath:
-    mode: 2
+    mode: 1
     interval: 0.5
     sensitivity: 10
     maximumInterval: 2
@@ -5156,12 +5156,12 @@ MonoBehaviour:
   agentTimeHorizon: 2
   obstacleTimeHorizon: 2
   maxNeighbours: 10
-  layer: 1
-  collidesWith: -1
+  layer: 2147483647
+  collidesWith: 2147483647
   wallAvoidForce: 1
   wallAvoidFalloff: 1
   priority: 0.5
-  debug: 0
+  debug: 1
 --- !u!1 &3272211268730596292
 GameObject:
   m_ObjectHideFlags: 0

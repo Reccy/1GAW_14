@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 634921212928572314}
   - component: {fileID: 634921212928572316}
   - component: {fileID: 634921212928572315}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FlameFX
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -5070,6 +5070,8 @@ MonoBehaviour:
   m_fireFX: {fileID: 634921212928572316}
   m_immediateEnflame: 0
   m_immediateExtinguish: 0
+  m_listenToCollisions: 1
+  m_listenToTriggers: 1
   m_debugMode: 0
 --- !u!114 &634921213739428614
 MonoBehaviour:
@@ -5093,7 +5095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 634921213795048627}
   - component: {fileID: 634921213795048628}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FlameCollider
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -5198,6 +5200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 6162304513928425268
-  updateError: 0.2
-  checkTime: 0.2
+  uniqueID: 4189742598972665483
+  updateError: 0.5
+  checkTime: 0.4

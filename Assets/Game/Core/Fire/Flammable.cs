@@ -9,6 +9,8 @@ public class Flammable : MonoBehaviour
     [SerializeField] private ParticleSystem m_fireFX;
     [SerializeField] private bool m_immediateEnflame = false;
     [SerializeField] private bool m_immediateExtinguish = false;
+    [SerializeField] private bool m_listenToCollisions = true;
+    [SerializeField] private bool m_listenToTriggers = true;
 
     private readonly float ENFLAME_DELAY = 0.2f;
     private readonly float EXTINGUISH_DELAY = 0.02f;
@@ -55,8 +57,16 @@ public class Flammable : MonoBehaviour
         fnp.Untrack(this);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) => HandleCollision2D(collision);
+    private void OnCollisionStay2D(Collision2D collision) => HandleCollision2D(collision);
+    private void OnTriggerEnter2D(Collider2D collision) => HandleTrigger2D(collision);
+    private void OnTriggerStay2D(Collider2D collision) => HandleTrigger2D(collision);
+
+    private void HandleCollision2D(Collision2D collision)
     {
+        if (!m_listenToCollisions)
+            return;
+
         var otherFlammable = collision.gameObject.GetComponent<Flammable>();
 
         if (otherFlammable == null)
@@ -68,8 +78,11 @@ public class Flammable : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void HandleTrigger2D(Collider2D collision)
     {
+        if (!m_listenToTriggers)
+            return;
+
         var otherFlammable = collision.gameObject.GetComponent<Flammable>();
 
         if (otherFlammable == null)
