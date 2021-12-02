@@ -5199,5 +5199,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   uniqueID: 6162304513928425268
-  updateError: 1
+  updateError: 0.2
   checkTime: 0.2

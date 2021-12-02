@@ -7488,9 +7488,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   desiredSimulationFPS: 20
-  workerThreads: 2
+  workerThreads: -1
   doubleBuffering: 0
-  symmetryBreakingBias: 0.2
+  symmetryBreakingBias: 0.05
   movementPlane: 1
   drawObstacles: 1
 --- !u!1001 &1593841055
@@ -10161,49 +10161,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.037
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.034
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177676757696885016, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433922175935101765, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1433922176949376561, guid: f0ff3868777d55140b742fad727367ae, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1433922176949376561, guid: f0ff3868777d55140b742fad727367ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -24.53
       objectReference: {fileID: 0}
     - target: {fileID: 1433922176949376561, guid: f0ff3868777d55140b742fad727367ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 1433922176949376561, guid: f0ff3868777d55140b742fad727367ae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10240,26 +10208,6 @@ PrefabInstance:
     - target: {fileID: 1433922176949376562, guid: f0ff3868777d55140b742fad727367ae, type: 3}
       propertyPath: m_Name
       value: Fireman
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433922176949376562, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433922177112097652, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755707984002183748, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: ShapeModule.angle
-      value: 5.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755707984002183748, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755707984002183748, guid: f0ff3868777d55140b742fad727367ae, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 3.78
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ff3868777d55140b742fad727367ae, type: 3}

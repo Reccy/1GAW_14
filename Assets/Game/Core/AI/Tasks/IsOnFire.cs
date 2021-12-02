@@ -6,7 +6,7 @@ public class IsOnFire : Conditional
 
     public override void OnAwake()
     {
-        m_flammable = GetComponent<Flammable>();
+        m_flammable = gameObject.GetComponentInChildren<Flammable>();
     }
 
     public override TaskStatus OnUpdate()

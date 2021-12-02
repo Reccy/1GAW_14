@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4941740167670213145}
   - component: {fileID: 3160307890151432452}
   - component: {fileID: 6167558437633751793}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: FlameFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5288,13 +5288,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3345653598440336887}
-  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.012, z: -0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.037, y: -0.034, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1433922175206488545}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6755707984002183748
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5431,7 +5431,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 3.78
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5924,7 +5924,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 3.5
+    angle: 5.66
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -6010,7 +6010,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.4
+      value: 0.58
       mode: 0
       spread: 0
       speed:
@@ -10089,7 +10089,7 @@ GameObject:
   - component: {fileID: 6469904424716168249}
   - component: {fileID: 6790146087735652888}
   - component: {fileID: 1209977825}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Flamethrower
   m_TagString: Fire
   m_Icon: {fileID: 0}
