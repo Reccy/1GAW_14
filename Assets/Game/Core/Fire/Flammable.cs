@@ -12,6 +12,8 @@ public class Flammable : MonoBehaviour
     [SerializeField] private bool m_listenToCollisions = true;
     [SerializeField] private bool m_listenToTriggers = true;
 
+    public ParticleSystem FX => m_fireFX;
+
     private readonly float ENFLAME_DELAY = 0.2f;
     private readonly float EXTINGUISH_DELAY = 0.02f;
 
@@ -111,7 +113,9 @@ public class Flammable : MonoBehaviour
             Debug.Log("ENFLAME!");
 
         m_enflamed = true;
-        m_fireFX.Play();
+
+        if (m_fireFX)
+            m_fireFX.Play();
 
         if (OnEnflamed != null)
             OnEnflamed();
@@ -134,7 +138,9 @@ public class Flammable : MonoBehaviour
             Debug.Log("EXTINGUISHED!");
 
         m_enflamed = false;
-        m_fireFX.Stop();
+
+        if (m_fireFX)
+            m_fireFX.Stop();
 
         if (OnExtinguished != null)
             OnExtinguished();

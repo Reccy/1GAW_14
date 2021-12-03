@@ -4962,6 +4962,7 @@ GameObject:
   - component: {fileID: 8462634661787503535}
   - component: {fileID: 2961923956782006428}
   - component: {fileID: 3269499650187730976}
+  - component: {fileID: 3988292301299086268}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -5162,6 +5163,20 @@ MonoBehaviour:
   wallAvoidFalloff: 1
   priority: 0.5
   debug: 1
+--- !u!114 &3988292301299086268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272211268057170964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d695c2b9abaccb40812b625aa9aa86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flammable: {fileID: 6568889280320986221}
+  m_timeUntilDestroyed: 3
 --- !u!1 &3272211268730596292
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,4 +5428,6 @@ MonoBehaviour:
   m_fireFX: {fileID: 7155783089689665634}
   m_immediateEnflame: 0
   m_immediateExtinguish: 0
+  m_listenToCollisions: 1
+  m_listenToTriggers: 1
   m_debugMode: 0
