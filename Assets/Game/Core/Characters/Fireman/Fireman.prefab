@@ -4994,7 +4994,6 @@ GameObject:
   - component: {fileID: 4918515223802226656}
   - component: {fileID: 2101493505}
   - component: {fileID: 7923854761997944066}
-  - component: {fileID: 5074388212658370799}
   m_Layer: 0
   m_Name: Fireman
   m_TagString: Untagged
@@ -5134,20 +5133,6 @@ MonoBehaviour:
   m_listenToCollisions: 1
   m_listenToTriggers: 1
   m_debugMode: 0
---- !u!114 &5074388212658370799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433922176949376562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d695c2b9abaccb40812b625aa9aa86b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_flammable: {fileID: 7923854761997944066}
-  m_timeUntilDestroyed: 3
 --- !u!1 &1433922177112097654
 GameObject:
   m_ObjectHideFlags: 0
